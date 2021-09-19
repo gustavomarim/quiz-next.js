@@ -1,9 +1,9 @@
 import RespostaModel from './resposta'
 export default class QuestaoModel {
-    #id: number
-    #enunciado: string
-    #respostas: RespostaModel[]
-    #acertou: boolean
+    #id: number;
+    #enunciado: string;
+    #respostas: RespostaModel[];
+    #acertou: boolean;
     // #respondida:boolean
 
     constructor(id: number, enunciado: string, respostas: RespostaModel[],

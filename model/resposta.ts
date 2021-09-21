@@ -1,7 +1,7 @@
 export default class RespostaModel {
-    #valor: string
-    #certa: boolean
-    #revelada: boolean
+    #valor: string;
+    #certa: boolean;
+    #revelada: boolean;
 
     constructor(valor: string, certa: boolean, revelada = false) {
         this.#valor = valor;
@@ -29,5 +29,13 @@ export default class RespostaModel {
     get revelada() {
         return this.#revelada;
     }
+
+    paraObjeto() {
+        return {
+            valor: this.#valor,
+            certa: this.#certa,
+            revelada: this.#revelada,
+        };
+    };
 }
 

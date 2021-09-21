@@ -1,4 +1,4 @@
-import questoes from "./bancoDeQuestoes";
+import questoes from "../bancoDeQuestoes";
 
 export default (req, res) => {
     const idSelecionado = +req.query.id;

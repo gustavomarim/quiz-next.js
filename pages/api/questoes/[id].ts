@@ -8,11 +8,11 @@ export default (req, res) => {
 
     // Validação de questão válida
     if (unicaQuestaoOuNada.length === 1) {
-        const questaoSelecionada = unicaQuestaoOuNada[0];
+        const questaoSelecionada = unicaQuestaoOuNada[0].embaralharRespostas();
         res.status(200).json(questaoSelecionada.paraObjeto());
     } else {
         res.status(204).send(); // Não tem conteúdo
     };
 
     res.status(200).json(questoes[0].paraObjeto());
-}
+};

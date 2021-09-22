@@ -24,11 +24,15 @@ export default class RespostaModel {
 
     get certa() {
         return this.#certa;
-    }
+    };
 
     get revelada() {
         return this.#revelada;
-    }
+    };
+
+    revelar() {
+        return new RespostaModel(this.#valor, this.#certa, true);
+    };
 
     paraObjeto() {
         return {

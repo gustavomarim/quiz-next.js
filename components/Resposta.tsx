@@ -16,9 +16,7 @@ export default function Resposta(props: RespostaProps) {
             <div className={styles.conteudoResposta}>
                 <div className={styles.frente}>
                     <div className={styles.letra}
-                        style={{
-                            backgroundColor: props.corFundoLetra
-                        }}>
+                        style={{ backgroundColor: props.corFundoLetra }}>
                         {props.letra}
                     </div>
                     <div className={styles.valor}>

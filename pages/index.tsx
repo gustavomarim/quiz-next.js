@@ -31,6 +31,7 @@ export default function Home() {
       height: '100vh',
     }}>
       <Questao valor={questao}
+        tempoPraResposta={5}
         respostaFornecida={respostaFornecida}
         tempoEsgotado={tempoEsgotado} />
     </div>

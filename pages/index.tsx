@@ -16,7 +16,7 @@ export default function Home() {
   const [questao, setQuestao] = useState(questaoMock);
 
   function questaoRespondida(questao: QuestaoModel) {
-
+    
   };
 
   function irPraProximoPasso() {
@@ -43,7 +43,7 @@ export default function Home() {
     }}>
       <Questionario
         questao={questao}
-        ultima={true}
+        ultima={false}
         questaoRespondida={questaoRespondida}
         irPraProximoPasso={irPraProximoPasso}
       />

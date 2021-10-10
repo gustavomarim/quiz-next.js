@@ -15,13 +15,12 @@ const BASE_URL = "http://localhost:3000/api";
 export default function Home() {
   const [idsDasQuestoes, setidsDasQuestoes] = useState<number[]>([]);
   const [questao, setQuestao] = useState<QuestaoModel>(questaoMock);
+  const [respostasCertas, setrespostasCertas] = useState<number>(0);
 
   async function carregarIdsDasQuestoes() {
     const resp = await fetch(`${BASE_URL}/questionario`);
     const idsDasQuestoes = await resp.json();
     setidsDasQuestoes(idsDasQuestoes);
-    console.log(idsDasQuestoes);
-
   };
 
   async function carregarQuestao(idQuestao: number) {
@@ -41,12 +40,14 @@ export default function Home() {
     idsDasQuestoes.length > 0 && carregarQuestao(idsDasQuestoes[0]);
   }, [idsDasQuestoes]);
 
-  function questaoRespondida(questao: QuestaoModel) {
-
+  function questaoRespondida(questaoRespondida: QuestaoModel) {
+    setQuestao(questaoRespondida);
+    const acertou = questaoRespondida.acertou;
+    setrespostasCertas(respostasCertas + (acertou ? 1 : 0));
   };
 
   function irPraProximoPasso() {
-
+    
   };
 
   return (
